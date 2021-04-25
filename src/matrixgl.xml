@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<screensaver name="matrixgl" _label="HellGL">
+   <command arg="-root" /> 
+   <boolean id="static" _label="Disable 3D Images (static mode)" arg-set="-static"/>
+   <boolean id="showcred" _label="Show Credits on Startup" arg-set="-credits"/>
+   <number id="colDensity" type="slider" arg="-d %"
+            _label="Rain Density" _low-label="Low" _high-label="High"
+            low="1" high="200" default="30"/>
+   <number id="fpslimit" type="slider" arg="-l %"
+            _label="Frames per second" _low-label="1" _high-label="60"
+            low="1" high="60" default="100"/>
+
+   <select id="color"> 
+      <option id="green" _label="Green text" arg-set="-C green" />
+      <option id="red" _label="Red text" arg-set="-C red" />
+      <option id="blue" _label="Blue text" arg-set="-C blue" />
+   </select>
+
+   <_description>
+   A 3D matrix screensaver based on the Matrix Reloaded
+   </_description>
+</screensaver>

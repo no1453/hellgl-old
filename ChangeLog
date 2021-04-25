@@ -1,0 +1,248 @@
+matrixgl-v2.3.1 (2013/12/27)
+---------------
+- Fullscreen option w/o xscreensaver is now proper fullscreen
+- The '--root' option is now different from '--fs'
+- Fixed widescreen gaps in neo-guns image
+- Added two new 3D images by Chris_C
+- Updated manpage to fix a groff hypen/minus-sign issue
+- Removed bogus entry from src/Makefile.am (until autoconf rewrite is done)
+- Fixed linker bug where libraries where in LDFLAGS instead of LDADD, which
+caused compilation failures on recent versions of Debian/Ubuntu/Mint
+
+matrixgl-v2.3	 (2010/06/23)
+-------------
+. Fixed configure script to fail when dependencies aren't met
+. Added section on dependencies to the README
+. Added more verbose error messages when the configure script fails
+
+matrixgl-v2.2.9 (2010/04/20)
+---------------
+. Overhauled bug report script
+	- Dialog no longer required (or used)
+	- Better output and feedback for user
+	- Autotools is only required for snapshots now
+	- Cleaner, and gives better info in the report.
+. Fixed a bug with the windows installer script
+. Removed OSX support from the OpenGL .m4 files
+. Removed conditional OSX includes
+. Added mac/win source to 'make dist' tarball
+
+matrixgl-v2.2.8 (2010/01/30)
+---------------
+. Autotools scripts now work with 'make dist'
+. Default prefix is now /usr, which fixes problems
+with distros not recognizing things in /usr/local,
+and simplifies code that previously handled this.
+. add-user-entry.sh has more useful output now.
+. Updated the manpage, mainly regarding the --limit option.
+. Dropped support for windows builds
+. Removed the BUGS file
+
+matrixgl-v2.2.7 (2009/12/09)
+---------------
+. Added a windows installer (no .zip files anymore)
+. Added clearer install instructions to README
+. Reformetted font/image data header files 
+. Fixed bug where man1 dir was incorrectly found
+. Added a git ignore file
+
+matrixgl-v2.2.6 (2009/11/14)
+---------------
+. Mac OSX Port available for 10.4+
+. Fixed compatibility issue with PLD Linux
+. Removed $(cmd) portability issue from add-user-entry.sh
+
+matrixgl-v2.2.5 (2009/10/20)
+---------------
+. Updated find maxdepth in bug report script
+. Updated bug report script so that find skips several large trees in /usr.
+. Removed EUID bashism from bug report script.
+. Added PLD Linux xscreensaver paths to autoconf script
+. Fixed out-of-bounds memory error
+. We now free used memory before exiting
+. Removed deprecated install/remove messages (options no longer exist)
+. Updated documentation to conform to common style
+. Removed crap from README, rewrote for better readability
+. Added script to add entry to ~/.xscreensaver for distros
+with bad versions of xscreensaver.
+
+matrixgl-v2.2.4 (2009/07/18)
+---------------
+. Fixed mouse bug in windows caused by terrible buggy drivers
+. Updated timing in the windows build.
+
+matrixgl-v2.2.3 (2009/07/08)
+---------------
+. Updated windows config dialog
+
+matrixgl-v2.2.2 (2009/07/07)
+---------------
+. Added configuration dialog for Windows
+. Added --limit option in *NIX, to change the framerate limit.
+
+matrixgl-v2.2.1 (2009/06/25)
+---------------
+. Framerate limited to 32fps
+. Images fade in/out much more smoothly
+. Updated documentation
+. Removed deprecated install method (matrixgl -install)
+. Removed deprecated remove method (matrixgl -remove)
+. Added option to build w/o xscreensaver support
+
+matrixgl-v2.2 (2009/06/19)
+---------------
+. No longer have to uncomment a #define to compile on windows
+. Added script to generate useful bug reports
+. Ported to autotools.
+. Restructured organization
+. Started using standard GNU files (AUTHORS.. etc)
+. We manually find the man1 dir, as automakes method is broken
+
+matrixgl-v2.1.1 (2009/06/12)
+---------------
+. Added check to make sure we only install from the source directory
+. Added --fs and --fullscreen options, for when running from a terminal
+. Updated documentation
+. Updated include's to be compatible with OSX OpenGL.
+. Updated Makefile to work better with OSX (still a problem with glx)
+. No longer runs as root, unless specifically requested with new opt
+. Removed usleep call, so that it runs faster on slower cards
+. Added FPS stats, and option to enable them
+. Updated author information 
+
+matrixgl-v2.1  (2009/06/7)
+-------------
+. Ported from GLUT to x11 on *NIX
+. Fixed xscreensaver support
+. Preview in xscreensaver now works
+. Added file vroot.h so we can write to the virtual root for xscreensaver
+. Fixed how the X11 scrolling is handled
+
+matrixgl-v2.0.2  (2009/06/4)
+---------------
+. Added additional install support for openbsd (and other distros that 
+use alternative xscreensaver directories).
+. Added failure message if we can't find the xscreensaver dirs.
+. Added color option, to change from green to red or blue.
+. Fixed bug with static option not working
+. Fixed static/credit option collision
+. Fixed bug that broke matrixgl with xscreensaver
+. Updated X11 include directories to support macs
+. Updated install checks
+. Added GLUT .dll to win32 bin, to make Windows installation simpler.
+
+matrixgl-v2.0.1 (2009/06/3)
+---------------
+. Linked in the math library (needed for openbsd)
+. Added list of supported OS's to README
+
+matrixgl-v2.0 (2009/06/3)
+--------------
+. Fixed all 3D images, they all work in widescreen
+. Starts at an actually random image now
+. Added credit option, to show credits on startup
+. Install now adds binary to /usr/bin, so it can be run from a term
+. Fixed some sign problems (now gcc error free)
+
+matrixgl-v1.5A (2009/06/2)
+--------------
+. Added xscreensaver support
+. Remove kde support (as xscreensaver can be used in kde/gnome..etc,
+plus, kde changes the directory structure often)
+. Started using getopt long, for better arg parsing
+. Added better help description
+. Added manpage
+
+matrixgl-v1.2A (2009/06/2)
+--------------
+. Initialization of light tables is now hidden! (i.e it starts properly, instantly)
+. Added a 3D image of tank
+. Fixed 3 of the widescreen unfriendly images (3 to go)
+. Fixed white pixel bug
+. Fixed bug in credits where the end of the 'Double Creations' was broken
+. Initialized text_light to start with a higher alpha
+. Checked malloc for NULL
+. Removed load_texture (adjusting green boost counter-acts the color change)
+. Removed ability to change X and Y offset (not useful for testing anymore)
+
+matrixgl-v1.1A (2009/05/30)
+---------------
+. Removed 3D images that don't work in widescreen
+. Fixed a few small bugs
+. Added my first image, front shot of smith (#9)
+
+matrixgl-v1.05A   (2008/10/08)
+-----------------
+. Widescreen support complete
+	- Calculates text_x then allocs the core arrays.
+	- rtext_x maintains the width of the 3D 'images'
+. Added header file matrix.h to prototype functions
+. Moved main() to the top 
+. Started editing 3D 'image' data to get seemless edges
+	- The extra columns for widescreen setups makes images
+	that fade at the edges look very lame.
+
+matrixgl-v1.04A   (2008/09/26)
+-----------------
+. Added widescreen capabilities
+	- 90x70 image shown in center
+	- Regular full-alpha lines scroll the sides
+	- Works for any screen-res, but doesn't detect the res YET
+. Hide mouse in windows
+. Increased the brightness of green slightly
+. Knoppix.ru shows longer in credits, so it's consistent with 'Double Creations' timing
+. Edited Makefile, to surpress some of the output
+. Removed lighting calls and arrays, as lighting is then disabled!
+. Removed two unused variables in ourInit()
+. Slimmed down make_text
+
+matrixgl-v1.03A  (2008/05/02)
+-----------------
+. Fixed a bug that caused a slightly incorrect pic_offset
+
+matrixgl-v1.02A  (2008/04/25)
+-----------------
+. Added icon to Windows binary
+. Added ico and xpm icon files (files only, not used in source)
+. Added .desktop file, to install in KDE screensaver directory
+. -install option now creates screensaver directory
+. -install option adds icon to pixmaps directory
+. Checks for root for options -install,-remove
+. Added strip command to Makefile
+. Removed 'make clean', it cleans automatically now
+. Removed 'rm matrix' from Makefile (file never exists)
+. Added file manifest, and made other additions to README
+. Added TODO file for future plans
+
+matrixgl-v1.01A
+------------------
+This section highlights changes made from the base knoppix.ru release 1.0
+. Now runs in the desktop's current resolution in *NIX
+. Fixed a mouse bug in Windows that caused it to exit almost immediatly
+	- Note: It appears that only a handful of setups had this bug
+. Fixed bug regarding a permanant white node in the top left corner
+. Removed FPS stats
+. Removed timing functions and unused variables
+. Removed catching of special keys
+. Removed texture error checking: 
+	- Makes ugly source code, and I don't see it ever failing.
+. Added Classic mode (to disable 3D images, toggle with 's')
+. Added pause functionality (toggle with 'p')
+. Improved 'n' next picture function so that it makes smoother transitions
+. Combined 2 funcs into draw_char
+. Added a 3rd column speed
+. Added 'c' key to show credits
+. Credits no longer show when started (see tail of README)
+. Removed concurrent column speed collisions (they become speed 3)
+. Added 'Double Creations' screen to follow knoppix in credits
+. Modified credits to dissapear and transition faster
+. Added --help option (*NIX only)
+. Added --version option (*NIX only)
+. Prints out message with name, mentioning help option (*NIX only)
+. Stopped linking in the math library on *NIX
+. Cleaned up source, removed some useless modifiers that were always 0.
+. Added license block, name, and description to source code
+. Added README, CHANGELOG, LICENSE (GPL V2)
+. Removed check for 0 height in cbResizeScene
+. Removed check for it GLUT window exists
+. Removed Height/Width args for ourInit

@@ -1,0 +1,83 @@
+This file contains a non-definitive list of user-visible changes. 
+See ChangeLog for a more detailed log of changes, geared toward developers
+
+Changes in 2.3.1
+----------------
+. Added two new 3D images courtsey of Chris_C
+. Fixed some issues with gaps in some of the images with widescreens
+. The fullscreen option now does proper fullscreen in X11 (this has absolutely
+nothing to do with xscreensaver fullscreen.)
+. Fixed linker issue that caused compilation failures on Debian/Ubuntu/Mint
+
+Changes in 2.3
+--------------
+. Fixed configure script to fail when dependencies aren't met
+. Added section on dependencies to the README
+. Added more verbose error messages when the configure script fails
+
+Changes in 2.2.9
+----------------
+. Win/mac source code is now properly included in the release tarball.
+. Fixed a windows bug where matrixgl wouldn't display in the screensaver list.
+
+Changes in 2.2.8
+----------------
+. Default install prefix is now /usr (see INSTALL for how to change this)
+. add-user-entry.sh script now outputs more useful information
+. Updated the manpage
+. Windows builds are no longer supported
+
+Changes in 2.2.7
+----------------
+. Added an installer for windows
+. Better build instructions
+
+Changes in 2.2.6
+---------------
+. Mac OSX port by Stephane Sudre, for OSX 10.4+
+. Fixed compatability issue with PLD Linux
+
+Changes in 2.2.5
+----------------
+. Numerous small bug fixes
+. Updated documentation
+. Fixed compatibility issue with pld linux
+. There is now a script (add-user-entry.sh) that adds matrixgl
+to the xscreensaver-demo list, incase it isn't done automatically
+on your disto.
+
+Changes in 2.2.4
+----------------
+. Fixed a bug that would cause the screensaver to close randomly in windows.
+. The images now progress faster in the windows build.
+
+Changes in 2.2.3
+----------------
+. Clicking 'Save' in the config dialog now exits too
+. The credits option is disabled in the config dialog when
+3D mode is disabled, since the credits are 3D.
+
+Changes in 2.2.2
+----------------
+. Added configuration dialog for Windows
+. Added --limit option in *NIX, to change the framerate limit.
+
+Changes in 2.2.1
+----------------
+. Framerate limited to 32fps
+. Images fade in/out much more smoothly
+. Added --disable-xscreensaver option to the configure 
+script, so that matrixgl can be used without xscreensaver.
+
+Changes in 2.2 (from the original 1.0 release)
+-----------------------------------------------
+* Added widescreen support.
+* Fixed 3D images to look good in widescreen.
+* Added new 3D images.
+* Ported to xscreensaver so we can support all Destkop Environments.
+* Ported to the GNU Build System, for an easier build and install process.
+* No longer has a visually unappealing startup.
+* Added documentation and a new website
+* Added options for stuff like color, that can also be set in xscreensaver-demo.
+* Runs in the native desktop resolution in Linux.
+* Fixed a Windows bug that caused matrixgl to quit after a few seconds.
